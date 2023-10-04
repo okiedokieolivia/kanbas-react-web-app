@@ -1,0 +1,33 @@
+.wd-profile-content {
+  padding-top: 20px;
+}
+
+.wd-profile-content .wd-profile-icon {
+  font-size: 5.5rem;
+  color: rgb(181, 178, 178);
+}
+
+.wd-profile-content h2,
+.wd-profile-content h3 {
+  margin: 12px 0;
+  line-height: 1.5;
+  font-weight: normal;
+  color: rgb(65, 65, 66);
+}
+
+.wd-profile-content h2 {
+  font-size: 1.8rem;
+}
+
+.wd-profile-content h3 {
+  font-size: 1.5rem;
+}
+
+.wd-profile-content .wd-profile-link-icon {
+  color: grey;
+  margin-right: 10px;
+}
+
+.wd-profile-basic-info {
+  margin-top: 20px;
+}

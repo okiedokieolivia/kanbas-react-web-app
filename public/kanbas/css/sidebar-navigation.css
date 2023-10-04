@@ -1,0 +1,31 @@
+.wd-sidebar-navigation {
+  background-color: white;
+  list-style: none;
+  padding: 0px;
+  width: 190px;
+  margin: 0px;
+}
+.wd-sidebar-navigation li {
+  padding-left: 10px;
+  padding-right: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.wd-sidebar-navigation li.wd-active {
+  border-left: 2px solid black;
+}
+.wd-sidebar-navigation li.wd-active a {
+  color: black;
+}
+
+.wd-sidebar-navigation a {
+  color: rgb(191, 7, 7);
+  text-decoration: none;
+}
+
+.wd-sidebar-navigation a:hover {
+  color: rgb(191, 7, 7);
+  text-decoration: none;
+}

@@ -1,33 +1,109 @@
-<table>
-  <tr>
-    <!-- Kanbas Navigation -->
-    <td valign="top">
-      <ul>
-        <li><a href="/kanbas/account-navigation.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="/kanbas/course-navigation.html">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </td>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/kanbas/css/kanbas-navigation.css" />
+    <link rel="stylesheet" href="/kanbas/css/sidebar-navigation.css" />
+    <link rel="stylesheet" href="/kanbas/css/index.css" />
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/vendors/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wd-kanbas-container">
+      <!-- Kanbas Navigation bar -->
+      <div class="wd-bg-color-black d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+          <!-- NU logo -->
+          <li>
+            <img src="/images/NUlogo2.png" alt="NU logo" />
+          </li>
+          <!-- Account -->
+          <li class="wd-active">
+            <a href="/kanbas/profile">
+              <i class="fa fa-user wd-white-icon" aria-hidden="true"></i><br />
+              Account</a
+            >
+          </li>
+          <!-- Dashboard -->
+          <li>
+            <a href="/kanbas/dashboard.html">
+              <i class="fas fa-tachometer-alt"></i><br />
+              Dashboard</a
+            >
+          </li>
+          <!-- Courses -->
+          <li class="wd-active">
+            <a href="/kanbas/home.html">
+              <i class="fas fa-book"></i><br />
+              Courses</a
+            >
+          </li>
+          <!-- Calendar -->
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i><br />
+              Calendar</a
+            >
+          </li>
+          <!-- Inbox -->
+          <li>
+            <a href="#">
+              <i class="fas fa-inbox"></i><br />
+              Inbox</a
+            >
+          </li>
+          <!-- History -->
+          <li>
+            <a href="#">
+              <i class="far fa-clock"></i><br />
+              History</a
+            >
+          </li>
+          <!-- Studio -->
+          <li>
+            <a href="#">
+              <i class="fas fa-tv"></i><br />
+              Studio</a
+            >
+          </li>
+          <!-- Commons -->
+          <li>
+            <a href="#">
+              <i class="fas fa-sign-out-alt"></i><br />
+              Commons</a
+            >
+          </li>
+          <!-- Help -->
+          <li>
+            <a href="#">
+              <i class="far fa-question-circle"></i><br />
+              Help</a
+            >
+          </li>
+        </ul>
+      </div>
 
-    <!-- Account Navigation -->
-    <td valign="top">
-      <ul>
-        <li><a href="#">Notifications</a></li>
-        <li><a href="/kanbas/profile">Profile</a></li>
-        <li><a href="#">Files</a></li>
-        <li><a href="#">Settings</a></li>
-        <li><a href="#">ePortfolios</a></li>
-        <li><a href="#">Shared Content</a></li>
-        <li><a href="#">The Hub</a></li>
-        <li><a href="#">Qwickly Course Tools</a></li>
-        <li><a href="#">Global Announcements</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+      <!-- Account Navigation -->
+      <div class="wd-main-page-container">
+        <div class="wd-main-page-header">
+          <a href="#">
+            <i class="fas fa-bars"></i>
+            Yifan He's Profile
+          </a>
+          <hr />
+        </div>
+
+        <ul class="wd-sidebar-navigation">
+          <li><a href="#">Notifications</a></li>
+          <li class="wd-active"><a href="/kanbas/profile">Profile</a></li>
+          <li><a href="#">Files</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">ePortfolios</a></li>
+          <li><a href="#">Shared Content</a></li>
+          <li><a href="#">The Hub</a></li>
+          <li><a href="#">Qwickly Course Tools</a></li>
+          <li><a href="#">Global Announcements</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

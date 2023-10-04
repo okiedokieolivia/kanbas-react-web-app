@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/kanbas/css/kanbas-navigation.css" />
+    <link rel="stylesheet" href="/kanbas/css/sidebar-navigation.css" />
+    <link rel="stylesheet" href="/kanbas/css/index.css" />
+    <link rel="stylesheet" href="/kanbas/css/dashboard.css" />
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/vendors/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wd-kanbas-container">
+      <!-- Kanbas Navigation bar -->
+      <div class="wd-bg-color-black d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+          <!-- NU logo -->
+          <li>
+            <img src="/images/NUlogo2.png" alt="NU logo" />
+          </li>
+          <!-- Account -->
+          <li>
+            <a href="/kanbas/profile/index.html">
+              <i class="fa fa-user wd-white-icon" aria-hidden="true"></i><br />
+              Account</a
+            >
+          </li>
+          <!-- Dashboard -->
+          <li class="wd-active">
+            <a href="/kanbas/dashboard.html">
+              <i class="fas fa-tachometer-alt"></i><br />
+              Dashboard</a
+            >
+          </li>
+          <!-- Courses -->
+          <li>
+            <a href="/kanbas/home.html">
+              <i class="fas fa-book"></i><br />
+              Courses</a
+            >
+          </li>
+          <!-- Calendar -->
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i><br />
+              Calendar</a
+            >
+          </li>
+          <!-- Inbox -->
+          <li>
+            <a href="#">
+              <i class="fas fa-inbox"></i><br />
+              Inbox</a
+            >
+          </li>
+          <!-- History -->
+          <li>
+            <a href="#">
+              <i class="far fa-clock"></i><br />
+              History</a
+            >
+          </li>
+          <!-- Studio -->
+          <li>
+            <a href="#">
+              <i class="fas fa-tv"></i><br />
+              Studio</a
+            >
+          </li>
+          <!-- Commons -->
+          <li>
+            <a href="#">
+              <i class="fas fa-sign-out-alt"></i><br />
+              Commons</a
+            >
+          </li>
+          <!-- Help -->
+          <li>
+            <a href="#">
+              <i class="far fa-question-circle"></i><br />
+              Help</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="wd-main-page-container">
+        <!-- The header rendered when the screen is small -->
+        <div
+          class="wd-main-page-header-sm d-md-none wd-bg-color-black wd-flex-row-container"
+        >
+          <a
+            class="btn fas fa-bars wd-fg-color-white"
+            data-bs-toggle="offcanvas"
+            href="#kanbas-navigation-sm"
+          ></a>
+          <div class="wd-fg-color-white wd-center-wrapper wd-vertical-display">
+            <div>Dashboard</div>
+          </div>
+          <div></div>
+        </div>
+
+        <!-- The Kanbas navigation bar rendered when the screen is small -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          aria-labelledby="offcanvasExampleLabel"
+          id="kanbas-navigation-sm"
+        >
+          <div class="offcanvas-header d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="list-unstyled">
+              <li>
+                <a href="/kanbas/dashboard.html">
+                  <i class="fas fa-tachometer-alt me-2"></i>
+                  Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="/kanbas/profile/index.html">
+                  <i
+                    class="fa fa-user wd-fg-color-grey me-2 ms-3"
+                    aria-hidden="true"
+                  ></i>
+                  Account</a
+                >
+              </li>
+              <li>
+                <a href="/kanbas/home.html">
+                  <i class="fas fa-book me-2 ms-3"></i>
+                  Courses</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-calendar-alt me-2"></i>
+                  Calendar</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-inbox me-2"></i>
+                  Inbox</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-tv me-2"></i>
+                  Studio</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-sign-out-alt me-2"></i>
+                  Commons</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="far fa-clock me-2 ms-3"></i>
+                  History</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="far fa-question-circle me-2 ms-3"></i>
+                  Help</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h1 class="wd-weight-light-heading">Dashboard</h1>
+        <hr />
+
+        <div class="container wd-dashboard-content">
+          <h3>Published Courses(9)</h3>
+
+          <hr />
+
+          <!-- Courses -->
+          <div class="row row-cols-md-3 row-cols-lg-4 wd-dashboard-grid">
+            <!-- <div class="row d-flex flex-wrap"> -->
+            <!-- course 1 -->
+            <div class="col">
+              <div class="card wd-dashboard-course">
+                <!-- <img src="/images/grey-course.jpg" class="card-img-top" /> -->
+                <div class="wd-dashboard-course-background">
+                  <i
+                    class="fas fa-ellipsis-v float-end wd-fg-color-white me-2 mt-2"
+                  ></i>
+                </div>
+                <div class="card-body">
+                  <a href="/kanbas/home.html" class="wd-dashboard-course-info">
+                    <div class="wd-dashboard-course-title wd-truncate-text">
+                      CS5610 17367 Web Development SEC 02 Fall 2023
+                    </div>
+                    <div class="wd-dashboard-course-number wd-truncate-text">
+                      CS5610.17367.202410
+                    </div>
+                    <div class="wd-dashboard-course-detail wd-truncate-text">
+                      202410_2 Fall 2023 Semester Full Term Grad
+                    </div>
+                  </a>
+                  <i class="far fa-clipboard wd-dashboard-course-icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- course 2 -->
+            <div class="col">
+              <div class="card wd-dashboard-course">
+                <div class="wd-dashboard-course-background">
+                  <i
+                    class="fas fa-ellipsis-v float-end wd-fg-color-white me-2 mt-2"
+                  ></i>
+                </div>
+                <div class="card-body">
+                  <a href="/kanbas/home.html" class="wd-dashboard-course-info">
+                    <div class="wd-dashboard-course-title wd-truncate-text">
+                      CS5330 20286 Pattern Recogn & Comput Vision SEC 01 Fall
+                      2023
+                    </div>
+                    <div class="wd-dashboard-course-number wd-truncate-text">
+                      CS5330.20286.202410
+                    </div>
+                    <div class="wd-dashboard-course-detail wd-truncate-text">
+                      202410_2 Fall 2023 Semester Full Term Grad
+                    </div>
+                  </a>
+                  <i class="far fa-clipboard wd-dashboard-course-icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- course 3 -->
+            <div class="col">
+              <div class="card wd-dashboard-course">
+                <div class="wd-dashboard-course-background">
+                  <i
+                    class="fas fa-ellipsis-v float-end wd-fg-color-white me-2 mt-2"
+                  ></i>
+                </div>
+                <div class="card-body">
+                  <a href="/kanbas/home.html" class="wd-dashboard-course-info">
+                    <div class="wd-dashboard-course-title wd-truncate-text">
+                      CS4700/5700 MERGED Fall 2022
+                    </div>
+                    <div class="wd-dashboard-course-number wd-truncate-text">
+                      CS5700.CS4700.202310
+                    </div>
+                    <div class="wd-dashboard-course-detail wd-truncate-text">
+                      202310_2 Fall 2022 Semester Full Term Grad
+                    </div>
+                  </a>
+                  <i class="far fa-clipboard wd-dashboard-course-icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- course 4 -->
+            <div class="col">
+              <div class="card wd-dashboard-course">
+                <div class="wd-dashboard-course-background">
+                  <i
+                    class="fas fa-ellipsis-v float-end wd-fg-color-white me-2 mt-2"
+                  ></i>
+                </div>
+                <div class="card-body">
+                  <a href="/kanbas/home.html" class="wd-dashboard-course-info">
+                    <div class="wd-dashboard-course-title wd-truncate-text">
+                      CS5800 Algorithms (38924 39691) Merged Spring 2023
+                    </div>
+                    <div class="wd-dashboard-course-number wd-truncate-text">
+                      CS5800.MERGED.SPRING2023
+                    </div>
+                    <div class="wd-dashboard-course-detail wd-truncate-text">
+                      202410_2 Fall 2023 Semester Full Term Grad
+                    </div>
+                  </a>
+                  <i class="far fa-clipboard wd-dashboard-course-icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- course 5 -->
+            <div class="col">
+              <div class="card wd-dashboard-course">
+                <div class="wd-dashboard-course-background">
+                  <i
+                    class="fas fa-ellipsis-v float-end wd-fg-color-white me-2 mt-2"
+                  ></i>
+                </div>
+                <div class="card-body">
+                  <a href="/kanbas/home.html" class="wd-dashboard-course-info">
+                    <div class="wd-dashboard-course-title wd-truncate-text">
+                      CS5002 33273 Discrete Structures SEC 01 Spring 2021
+                    </div>
+                    <div class="wd-dashboard-course-number wd-truncate-text">
+                      CS5002.17367.202410
+                    </div>
+                    <div class="wd-dashboard-course-detail wd-truncate-text">
+                      202130_2 Spring 2021 Semester Full Term Grad
+                    </div>
+                  </a>
+                  <i class="far fa-clipboard wd-dashboard-course-icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- course 6 -->
+            <div class="col">
+              <div class="card wd-dashboard-course">
+                <div class="wd-dashboard-course-background">
+                  <i
+                    class="fas fa-ellipsis-v float-end wd-fg-color-white me-2 mt-2"
+                  ></i>
+                </div>
+                <div class="card-body">
+                  <a href="/kanbas/home.html" class="wd-dashboard-course-info">
+                    <div class="wd-dashboard-course-title wd-truncate-text">
+                      CS5220 17367 Mobile Development SEC 02 Fall 2023
+                    </div>
+                    <div class="wd-dashboard-course-number wd-truncate-text">
+                      CS5220.17367.202410
+                    </div>
+                    <div class="wd-dashboard-course-detail wd-truncate-text">
+                      202130_2 Spring 2021 Semester Full Term Grad
+                    </div>
+                  </a>
+                  <i class="far fa-clipboard wd-dashboard-course-icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- course 7 -->
+            <div class="col">
+              <div class="card wd-dashboard-course">
+                <div class="wd-dashboard-course-background">
+                  <i
+                    class="fas fa-ellipsis-v float-end wd-fg-color-white me-2 mt-2"
+                  ></i>
+                </div>
+                <div class="card-body">
+                  <a href="/kanbas/home.html" class="wd-dashboard-course-info">
+                    <div class="wd-dashboard-course-title wd-truncate-text">
+                      CS6650 17367 Distributed Systems SEC 02 Fall 2023
+                    </div>
+                    <div class="wd-dashboard-course-number wd-truncate-text">
+                      CS6650.17367.202410
+                    </div>
+                    <div class="wd-dashboard-course-detail wd-truncate-text">
+                      202410_2 Fall 2023 Semester Full Term Grad
+                    </div>
+                  </a>
+                  <i class="far fa-clipboard wd-dashboard-course-icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- course 8 -->
+            <div class="col">
+              <div class="card wd-dashboard-course">
+                <div class="wd-dashboard-course-background">
+                  <i
+                    class="fas fa-ellipsis-v float-end wd-fg-color-white me-2 mt-2"
+                  ></i>
+                </div>
+                <div class="card-body">
+                  <a href="/kanbas/home.html" class="wd-dashboard-course-info">
+                    <div class="wd-dashboard-course-title wd-truncate-text">
+                      CS5004 17367 OOD SEC 02 Fall 2023
+                    </div>
+                    <div class="wd-dashboard-course-number wd-truncate-text">
+                      CS5004.17367.202410
+                    </div>
+                    <div class="wd-dashboard-course-detail wd-truncate-text">
+                      202410_2 Fall 2023 Semester Full Term Grad
+                    </div>
+                  </a>
+                  <i class="far fa-clipboard wd-dashboard-course-icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- course 9 -->
+            <div class="col">
+              <div class="card wd-dashboard-course">
+                <div class="wd-dashboard-course-background">
+                  <i
+                    class="fas fa-ellipsis-v float-end wd-fg-color-white me-2 mt-2"
+                  ></i>
+                </div>
+                <div class="card-body">
+                  <a href="/kanbas/home.html" class="wd-dashboard-course-info">
+                    <div class="wd-dashboard-course-title wd-truncate-text">
+                      CS5200 17367 Database Management SEC 02 Fall 2023
+                    </div>
+                    <div class="wd-dashboard-course-number wd-truncate-text">
+                      CS5200.17367.202410
+                    </div>
+                    <div class="wd-dashboard-course-detail wd-truncate-text">
+                      202410_2 Fall 2023 Semester Full Term Grad
+                    </div>
+                  </a>
+                  <i class="far fa-clipboard wd-dashboard-course-icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

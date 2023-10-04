@@ -1,0 +1,65 @@
+.wd-course-module-list {
+  margin-top: 20px;
+  border-radius: 0 !important;
+}
+
+.wd-course-module-list .wd-course-module-icon {
+  margin-left: 8px;
+}
+
+.wd-course-module-link {
+  color: rgb(191, 7, 7);
+  text-decoration: none;
+}
+
+.wd-course-module-link:hover {
+  color: rgb(191, 7, 7);
+  text-decoration: none;
+}
+
+.wd-course-right-sidebar {
+  margin-top: 20px;
+}
+
+.wd-course-right-sidebar button {
+  margin-top: 2px;
+}
+
+.wd-course-module-link-description {
+  font-size: 0.8rem;
+}
+
+.wd-grades-table th:first-child,
+.wd-grades-table td:first-child {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.wd-grades-table th:not(:first-child),
+.wd-grades-table td:not(:first-child) {
+  text-align: center;
+}
+
+.wd-grades-table td:first-child {
+  color: rgb(191, 7, 7) !important;
+}
+
+.wd-course-settings-navi-bar .nav-link {
+  color: rgb(191, 7, 7) !important;
+}
+
+.wd-course-settings-navi-bar .nav-link.active {
+  color: black !important;
+}
+
+.wd-course-image-setting {
+  width: 200px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.wd-course-module-list .list-group-item:not(.list-group-item-secondary) {
+  border-left: 4px solid green;
+}

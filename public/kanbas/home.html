@@ -1,150 +1,1257 @@
-<table>
-  <tr>
-    <!-- Kanbas Navigation -->
-    <td valign="top">
-      <ul>
-        <li><a href="/kanbas/account-navigation.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="/kanbas/course-navigation.html">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </td>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/kanbas/css/kanbas-navigation.css" />
+    <link rel="stylesheet" href="/kanbas/css/sidebar-navigation.css" />
+    <link rel="stylesheet" href="/kanbas/css/index.css" />
+    <link rel="stylesheet" href="/kanbas/css/course.css" />
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/vendors/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wd-kanbas-container">
+      <!-- Kanbas Navigation bar -->
+      <div class="wd-bg-color-black d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+          <!-- NU logo -->
+          <li>
+            <img src="/images/NUlogo2.png" alt="NU logo" />
+          </li>
+          <!-- Account -->
+          <li>
+            <a href="/kanbas/profile/index.html">
+              <i class="fa fa-user wd-white-icon" aria-hidden="true"></i><br />
+              Account</a
+            >
+          </li>
+          <!-- Dashboard -->
+          <li>
+            <a href="/kanbas/dashboard.html">
+              <i class="fas fa-tachometer-alt"></i><br />
+              Dashboard</a
+            >
+          </li>
+          <!-- Courses -->
+          <li class="wd-active">
+            <a href="/kanbas/home.html">
+              <i class="fas fa-book"></i><br />
+              Courses</a
+            >
+          </li>
+          <!-- Calendar -->
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i><br />
+              Calendar</a
+            >
+          </li>
+          <!-- Inbox -->
+          <li>
+            <a href="#">
+              <i class="fas fa-inbox"></i><br />
+              Inbox</a
+            >
+          </li>
+          <!-- History -->
+          <li>
+            <a href="#">
+              <i class="far fa-clock"></i><br />
+              History</a
+            >
+          </li>
+          <!-- Studio -->
+          <li>
+            <a href="#">
+              <i class="fas fa-tv"></i><br />
+              Studio</a
+            >
+          </li>
+          <!-- Commons -->
+          <li>
+            <a href="#">
+              <i class="fas fa-sign-out-alt"></i><br />
+              Commons</a
+            >
+          </li>
+          <!-- Help -->
+          <li>
+            <a href="#">
+              <i class="far fa-question-circle"></i><br />
+              Help</a
+            >
+          </li>
+        </ul>
+      </div>
 
-    <!-- Course Navigation -->
-    <td valign="top">
-      <ul>
-        <li><a href="/kanbas/home.html">Home</a></li>
-        <li><a href="#">Modules</a></li>
-        <li><a href="#">Piazza</a></li>
-        <li><a href="#">Zoom Meetings</a></li>
-        <li><a href="/kanbas/assignments">Assignments</a></li>
-        <li><a href="#">Quizzes</a></li>
-        <li><a href="/kanbas/grades.html">Grades</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Panopto Video</a></li>
-        <li><a href="#">Discussions</a></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Files</a></li>
-        <li><a href="#">Rubrics</a></li>
-        <li><a href="#">Outcomes</a></li>
-        <li><a href="#">Collaborations</a></li>
-        <li><a href="#">Syllabus</a></li>
-        <li><a href="/kanbas/settings">Settings</a></li>
-      </ul>
-    </td>
+      <div class="wd-main-page-container">
+        <!-- The header rendered when the screen is small -->
+        <div
+          class="wd-main-page-header-sm d-md-none wd-bg-color-black wd-flex-row-container"
+        >
+          <a
+            class="btn fas fa-bars wd-fg-color-white"
+            data-bs-toggle="offcanvas"
+            href="#kanbas-navigation-sm"
+          ></a>
+          <div class="wd-fg-color-white wd-center-wrapper wd-vertical-display">
+            <div>CS5610.17367.202410</div>
+            <div>Home</div>
+          </div>
+          <a
+            class="btn wd-main-page-header-toggle-icon wd-fg-color-white"
+            data-bs-toggle="collapse"
+            href="#sub-navigation-sm"
+          ></a>
+        </div>
 
-    <!-- third column -->
-    <td valign="top">
-      <button>Collapse All</button>
-      <button>View Progress</button>
-      <select>
-        <option>Publish All</option>
-        <option>UnPublish</option>
-      </select>
-      <button>Module</button>
+        <!-- The Kanbas navigation bar rendered when the screen is small -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          aria-labelledby="offcanvasExampleLabel"
+          id="kanbas-navigation-sm"
+        >
+          <div class="offcanvas-header d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="list-unstyled">
+              <li>
+                <a href="/kanbas/dashboard.html">
+                  <i class="fas fa-tachometer-alt me-2"></i>
+                  Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="/kanbas/profile/index.html">
+                  <i
+                    class="fa fa-user wd-fg-color-grey me-2 ms-3"
+                    aria-hidden="true"
+                  ></i>
+                  Account</a
+                >
+              </li>
+              <li>
+                <a href="/kanbas/home.html">
+                  <i class="fas fa-book me-2 ms-3"></i>
+                  Courses</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-calendar-alt me-2"></i>
+                  Calendar</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-inbox me-2"></i>
+                  Inbox</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-tv me-2"></i>
+                  Studio</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-sign-out-alt me-2"></i>
+                  Commons</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="far fa-clock me-2 ms-3"></i>
+                  History</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="far fa-question-circle me-2 ms-3"></i>
+                  Help</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
 
-      <br />
-
-      <ul>
-        <li>
-          Week 0 - INTRO
-          <ul>
+        <!-- The course navigation bar rendered when the screen is small -->
+        <div class="collapse" id="sub-navigation-sm">
+          <ul class="list-unstyled d-md-none ps-2">
             <li>
-              LEARNING OBJECTIVES
-              <ul>
-                <li>Introduction to the course</li>
-                <li>Learn what is Web Development</li>
-                <li>Creating a development environment</li>
-                <li>Creating a Web Application</li>
-                <li>Getting started with the 1st assignment</li>
-              </ul>
+              <a href="/kanbas/home.html">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-home"></i>
+                  </div>
+                  Home
+                </div>
+              </a>
             </li>
             <li>
-              READING
-              <ul>
-                <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                <li>Full Stack Developer - Chapter 2 - Creating User</li>
-                <li>Interfaces with HTML</li>
-              </ul>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-vector-square"></i>
+                  </div>
+                  Modules
+                </div>
+              </a>
             </li>
             <li>
-              SLIDES
-              <ul>
-                <li>
-                  <a href="#"
-                    >Introduction to Web Development Links to an external
-                    site.</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    >Creating an HTTP server with Node.js Links to an external
-                    site.</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    >Creating a React Application Links to an external site.</a
-                  >
-                </li>
-              </ul>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  Piazza
+                </div></a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  Zoom Meetings
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/kanbas/assignments/index.html">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-file-alt"></i>
+                  </div>
+                  Assignments
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-rocket"></i>
+                  </div>
+                  Quizzes
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/kanbas/grades.html">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-address-book"></i>
+                  </div>
+                  Grades
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-user-friends"></i>
+                  </div>
+                  People
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  Panopto Video
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-comment-dots"></i>
+                  </div>
+                  Discussions
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-bullhorn"></i>
+                  </div>
+                  Announcements
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-file-alt"></i>
+                  </div>
+                  Pages
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-folder"></i>
+                  </div>
+                  Files
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-clipboard-list"></i>
+                  </div>
+                  Rubrics
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-bullseye"></i>
+                  </div>
+                  Outcomes
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-circle"></i>
+                  </div>
+                  Collaborations
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-clipboard-list"></i>
+                  </div>
+                  Syllabus
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  Progress Reports (EAB Navigate)
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/kanbas/settings/course-details.html">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-cog"></i>
+                  </div>
+                  Settings
+                </div>
+              </a>
             </li>
           </ul>
-        </li>
-        <li>
-          Week 1 - HTML
-          <ul>
-            <li>
-              LEARNING OBJECTIVES
-              <ul>
-                <li>Learn how to create user interfaces with HTML</li>
-                <li>Keep working on Assignment 1</li>
-                <li>Deploy the assignment to Netlify</li>
-              </ul>
-            </li>
-            <li>
-              READING
-              <ul>
-                <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                <li>Full Stack Developer - Chapter 2 - Creating User</li>
-                <li>Interfaces with HTML</li>
-              </ul>
-            </li>
+        </div>
+
+        <div class="wd-main-page-header d-none d-md-block">
+          <div class="d-flex justify-content-between align-items-center">
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#" class="wd-fg-color-red">
+                    <i class="fas fa-bars wd-main-page-header-bar-icon"></i>
+                    CS5610.17367.202410</a
+                  >
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+              </ol>
+            </nav>
+
+            <button class="btn btn-light btn-sm border">
+              <i class="fas fa-glasses wd-fg-color-grey me-2"></i>
+              Student View
+            </button>
+          </div>
+          <hr />
+        </div>
+
+        <div class="wd-main-page-content">
+          <!-- Course Navigation bar -->
+          <ul class="wd-sidebar-navigation d-none d-md-block">
+            <li class="wd-active"><a href="/kanbas/home.html">Home</a></li>
+            <li><a href="#">Modules</a></li>
+            <li><a href="#">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li><a href="/kanbas/assignments/index.html">Assignments</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="/kanbas/grades.html">Grades</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="/kanbas/settings/course-details.html">Settings</a></li>
           </ul>
-        </li>
-      </ul>
-    </td>
 
-    <!-- fourth column -->
-    <td valign="top">
-      <h3>Course Status</h3>
+          <div class="container wd-content-container">
+            <div class="row">
+              <div class="wd-course-content col-12 col-lg-9">
+                <div class="wd-vertical-display">
+                  <!-- the horizontal list of buttons floating at the end -->
+                  <div>
+                    <div class="float-end">
+                      <button class="btn btn-light btn-sm border">
+                        Collapse All
+                      </button>
+                      <button class="btn btn-light btn-sm border">
+                        View Progress
+                      </button>
+                      <button
+                        class="btn btn-light btn-sm dropdown-toggle border"
+                      >
+                        <i class="far fa-check-circle wd-fg-color-green"></i>
+                        Publish All
+                      </button>
+                      <button class="btn btn-danger btn-sm">
+                        <i class="fas fa-plus wd-fg-color-white"></i>
+                        Module
+                      </button>
+                      <button class="btn btn-light btn-sm border">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
 
-      <button>Unpublish</button>
-      <button>Publish</button>
+                  <hr />
 
-      <ul>
-        <li><a href="#">Import Existing Content</a></li>
-        <li><a href="#">Import From Commons</a></li>
-        <li><a href="#">Choose Home Page</a></li>
-        <li><a href="#">View Course Stream</a></li>
-        <li><a href="#">New Announcement</a></li>
-        <li><a href="#">New Analytics</a></li>
-        <li><a href="#">View Course Notifications</a></li>
-      </ul>
+                  <!-- modules -->
+                  <!-- Module 0 -->
+                  <div class="list-group wd-course-module-list">
+                    <div class="list-group-item list-group-item-secondary">
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b>▼ Week 0 - INTRO</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-plus wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b>LEARNING OBJECTIVES</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5">Introduction to the course</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5">Learn what is Web Development</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5">Creating a development environment</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5">Creating a Web Application</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5"
+                        >Getting started with the 1st assignment</b
+                      >
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b>READING</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5"
+                        >Full Stack Developer - Chapter 1 - Introduction</b
+                      >
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5"
+                        >Full Stack Developer - Chapter 1 - Creating User
+                        Interfaces With HTML</b
+                      >
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b>SLIDES</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Introduction to the Web Development
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Introduction to the Web Development
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Creating an HTTP server with Node.js
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Creating a React Application
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Commit your source to GITHUB.com
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Deploying to Netlify
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Deploying multiple branches in Netlify
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                  </div>
 
-      <h3>Coming Up</h3>
-      <a href="#">View Calendar</a>
-      <ul>
-        <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-        <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-        <li><a href="#">CS5610 06 SP23 Sep 11 at 6pm</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+                  <!-- Module 1 -->
+                  <div class="list-group wd-course-module-list">
+                    <div class="list-group-item list-group-item-secondary">
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b>▼ Week 1 - HTML</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-plus wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b>LEARNING OBJECTIVES</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5"
+                        >Learn how to create user interfaces with HTML</b
+                      >
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5">Keep working on assignment 1</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5">Deploy the assignment to Netlify</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b>READING</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5"
+                        >Full Stack Developer - Chapter 1 - Introduction</b
+                      >
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b class="ps-5"
+                        >Full Stack Developer - Chapter 1 - Creating User
+                        Interfaces With HTML</b
+                      >
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <b>SLIDES</b>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Introduction to HTML and the DOM
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Formatting Web content with Headings and Paragraphs
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Formatting content with Lists and Tables
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Creating Web Forms
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Navigating with Anchors
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Embedding content with Iframes
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i
+                        class="fas fa-grip-horizontal fa-rotate-90 wd-fg-color-grey"
+                      ></i>
+                      <i class="fas fa-link wd-fg-color-green ps-2"></i>
+                      <a href="#" class="wd-course-module-link ps-3"
+                        >Drawing with Scalable Vector Graphics
+                        <i class="fas fa-external-link-alt"></i>
+                      </a>
+                      <div class="float-end">
+                        <i
+                          class="fas fa-check-circle wd-fg-color-green wd-course-module-icon"
+                        ></i>
+                        <i
+                          class="fas fa-ellipsis-v wd-fg-color-grey wd-course-module-icon"
+                        ></i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 d-none d-lg-block">
+                <div>Course Status</div>
+                <!-- buttons -->
+                <div class="btn-group">
+                  <button class="btn btn-light btn-sm border">
+                    <i class="fas fa-ban"></i>
+                    Unpublish
+                  </button>
+                  <button class="btn btn-success btn-sm border">
+                    <i class="fas fa-check-circle wd-fg-color-white"></i>
+                    Published
+                  </button>
+                </div>
+
+                <!-- actions -->
+                <div class="wd-vertical-display wd-course-right-sidebar">
+                  <button class="btn btn-light btn-sm border text-start">
+                    <i class="fas fa-file-import ps-1"></i>
+                    Import Existing Content
+                  </button>
+                  <button class="btn btn-light btn-sm border text-start">
+                    <i class="fas fa-sign-out-alt ps-1"></i>
+                    Import from Commons
+                  </button>
+                  <button class="btn btn-light btn-sm border text-start">
+                    <i class="fas fa-bullseye ps-1"></i>
+                    Choose Home Page
+                  </button>
+                  <button class="btn btn-light btn-sm border text-start">
+                    <i class="far fa-chart-bar ps-1"></i>
+                    View Course Stream
+                  </button>
+                  <button class="btn btn-light btn-sm border text-start">
+                    <i class="fas fa-bullhorn ps-1"></i>
+                    New Announcement
+                  </button>
+                  <button class="btn btn-light btn-sm border text-start">
+                    <i class="far fa-chart-bar ps-1"></i>
+                    New Analytics
+                  </button>
+                  <button class="btn btn-light btn-sm border text-start">
+                    <i class="fas fa-bell ps-1"></i>
+                    View Course Navigation
+                  </button>
+                </div>
+
+                <br />
+                <b>To Do</b>
+                <hr />
+
+                <div>
+                  <a href="#" class="wd-course-module-link wd-truncate-text">
+                    <div class="badge bg-danger rounded-pill">1</div>
+                    Grade A1 - ENV + HTML</a
+                  >
+                  <br />
+                  <span
+                    class="wd-fg-color-grey ps-4 wd-course-module-link-description wd-truncate-text"
+                    >100 points Sep 18 at 11:59pm</span
+                  >
+                </div>
+
+                <br />
+                <b>Coming Up</b>
+                <hr />
+
+                <div>
+                  <div class="wd-flex-row-container">
+                    <div class="pe-2">
+                      <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div>
+                      <a href="#" class="wd-course-module-link">Lecture</a>
+                      <div
+                        class="wd-fg-color-grey wd-course-module-link-description wd-truncate-text"
+                      >
+                        CS4550.12631.202410
+                      </div>
+                      <div
+                        class="wd-fg-color-grey wd-course-module-link-description wd-truncate-text"
+                      >
+                        Sep 11 at 11:45am
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wd-flex-row-container mt-1">
+                    <div class="pe-2">
+                      <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div>
+                      <a href="#" class="wd-course-module-link"
+                        >CS5610 06 SP23 Lecture</a
+                      >
+                      <div
+                        class="wd-fg-color-grey wd-course-module-link-description wd-truncate-text"
+                      >
+                        CS4550.12631.202410
+                      </div>
+                      <div
+                        class="wd-fg-color-grey wd-course-module-link-description wd-truncate-text"
+                      >
+                        Sep 11 at 6pm
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wd-flex-row-container mt-1">
+                    <div class="pe-2">
+                      <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div>
+                      <a href="#" class="wd-course-module-link"
+                        >CS5610 Web Development Summer 1 2023- LECTURE</a
+                      >
+                      <div
+                        class="wd-fg-color-grey wd-course-module-link-description wd-truncate-text"
+                      >
+                        CS4550.12631.202410
+                      </div>
+                      <div
+                        class="wd-fg-color-grey wd-course-module-link-description wd-truncate-text"
+                      >
+                        Sep 11 at 7pm
+                      </div>
+                    </div>
+                  </div>
+                  <a
+                    href="#"
+                    class="wd-course-module-link wd-truncate-text"
+                    style="font-size: 0.7rem"
+                    >12 more in the next week...</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

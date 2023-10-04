@@ -1,122 +1,659 @@
-<table>
-  <tr>
-    <!-- Kanbas Navigation -->
-    <td valign="top">
-      <ul>
-        <li><a href="/kanbas/account-navigation.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="/kanbas/course-navigation.html">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </td>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/kanbas/css/kanbas-navigation.css" />
+    <link rel="stylesheet" href="/kanbas/css/sidebar-navigation.css" />
+    <link rel="stylesheet" href="/kanbas/css/index.css" />
+    <link rel="stylesheet" href="/kanbas/css/course.css" />
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/vendors/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wd-kanbas-container">
+      <!-- Kanbas Navigation bar -->
+      <div class="wd-bg-color-black d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+          <!-- NU logo -->
+          <li>
+            <img src="/images/NUlogo2.png" alt="NU logo" />
+          </li>
+          <!-- Account -->
+          <li>
+            <a href="/kanbas/profile">
+              <i class="fa fa-user wd-white-icon" aria-hidden="true"></i><br />
+              Account</a
+            >
+          </li>
+          <!-- Dashboard -->
+          <li>
+            <a href="/kanbas/dashboard.html">
+              <i class="fas fa-tachometer-alt"></i><br />
+              Dashboard</a
+            >
+          </li>
+          <!-- Courses -->
+          <li class="wd-active">
+            <a href="/kanbas/home.html">
+              <i class="fas fa-book"></i><br />
+              Courses</a
+            >
+          </li>
+          <!-- Calendar -->
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i><br />
+              Calendar</a
+            >
+          </li>
+          <!-- Inbox -->
+          <li>
+            <a href="#">
+              <i class="fas fa-inbox"></i><br />
+              Inbox</a
+            >
+          </li>
+          <!-- History -->
+          <li>
+            <a href="#">
+              <i class="far fa-clock"></i><br />
+              History</a
+            >
+          </li>
+          <!-- Studio -->
+          <li>
+            <a href="#">
+              <i class="fas fa-tv"></i><br />
+              Studio</a
+            >
+          </li>
+          <!-- Commons -->
+          <li>
+            <a href="#">
+              <i class="fas fa-sign-out-alt"></i><br />
+              Commons</a
+            >
+          </li>
+          <!-- Help -->
+          <li>
+            <a href="#">
+              <i class="far fa-question-circle"></i><br />
+              Help</a
+            >
+          </li>
+        </ul>
+      </div>
 
-    <!-- Course Navigation -->
-    <td valign="top">
-      <ul>
-        <li><a href="/kanbas/home.html">Home</a></li>
-        <li><a href="#">Modules</a></li>
-        <li><a href="#">Piazza</a></li>
-        <li><a href="#">Zoom Meetings</a></li>
-        <li><a href="/kanbas/assignments">Assignments</a></li>
-        <li><a href="#">Quizzes</a></li>
-        <li><a href="/kanbas/grades.html">Grades</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Panopto Video</a></li>
-        <li><a href="#">Discussions</a></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Files</a></li>
-        <li><a href="#">Rubrics</a></li>
-        <li><a href="#">Outcomes</a></li>
-        <li><a href="#">Collaborations</a></li>
-        <li><a href="#">Syllabus</a></li>
-        <li><a href="/kanbas/settings">Settings</a></li>
-      </ul>
-    </td>
+      <div class="wd-main-page-container">
+        <!-- The header rendered when the screen is small -->
+        <div
+          class="wd-main-page-header-sm d-md-none wd-bg-color-black wd-flex-row-container"
+        >
+          <a
+            class="btn fas fa-bars wd-fg-color-white"
+            data-bs-toggle="offcanvas"
+            href="#kanbas-navigation-sm"
+          ></a>
+          <div class="wd-fg-color-white wd-center-wrapper wd-vertical-display">
+            <div>CS5610.17367.202410</div>
+            <div>Grades</div>
+          </div>
+          <a
+            class="btn wd-main-page-header-toggle-icon wd-fg-color-white"
+            data-bs-toggle="collapse"
+            href="#sub-navigation-sm"
+          ></a>
+        </div>
 
-    <!-- third column -->
-    <td valign="top">
-      <select>
-        <option>Gradebook</option>
-      </select>
-      <button>Import</button>
-      <select>
-        <option>Export</option>
-      </select>
-      <button>Configure</button>
+        <!-- The Kanbas navigation bar rendered when the screen is small -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          aria-labelledby="offcanvasExampleLabel"
+          id="kanbas-navigation-sm"
+        >
+          <div class="offcanvas-header d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="list-unstyled">
+              <li>
+                <a href="/kanbas/dashboard.html">
+                  <i class="fas fa-tachometer-alt me-2"></i>
+                  Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="/kanbas/profile/index.html">
+                  <i
+                    class="fa fa-user wd-fg-color-grey me-2 ms-3"
+                    aria-hidden="true"
+                  ></i>
+                  Account</a
+                >
+              </li>
+              <li>
+                <a href="/kanbas/home.html">
+                  <i class="fas fa-book me-2 ms-3"></i>
+                  Courses</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-calendar-alt me-2"></i>
+                  Calendar</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-inbox me-2"></i>
+                  Inbox</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-tv me-2"></i>
+                  Studio</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-sign-out-alt me-2"></i>
+                  Commons</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="far fa-clock me-2 ms-3"></i>
+                  History</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="far fa-question-circle me-2 ms-3"></i>
+                  Help</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
 
-      <table>
-        <tr>
-          <td>
-            <h3>Student Name</h3>
-            <input
-              id="search-students"
-              title="Type the name of the student to search for"
-              placeholder="Search Students"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>Assignment Name</h3>
-            <input
-              id="search-assignments"
-              title="Type the name of the assignment to search for"
-              placeholder="Search Assignments"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td height="50px"><button>Apply Filters</button></td>
-        </tr>
-      </table>
+        <!-- The course navigation bar rendered when the screen is small -->
+        <div class="collapse" id="sub-navigation-sm">
+          <ul class="list-unstyled d-md-none ps-2">
+            <li>
+              <a href="/kanbas/home.html">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-home"></i>
+                  </div>
+                  Home
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-vector-square"></i>
+                  </div>
+                  Modules
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  Piazza
+                </div></a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  Zoom Meetings
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/kanbas/assignments/index.html">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-file-alt"></i>
+                  </div>
+                  Assignments
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-rocket"></i>
+                  </div>
+                  Quizzes
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/kanbas/grades.html">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-address-book"></i>
+                  </div>
+                  Grades
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-user-friends"></i>
+                  </div>
+                  People
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  Panopto Video
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-comment-dots"></i>
+                  </div>
+                  Discussions
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-bullhorn"></i>
+                  </div>
+                  Announcements
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-file-alt"></i>
+                  </div>
+                  Pages
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-folder"></i>
+                  </div>
+                  Files
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-clipboard-list"></i>
+                  </div>
+                  Rubrics
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-bullseye"></i>
+                  </div>
+                  Outcomes
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="far fa-circle"></i>
+                  </div>
+                  Collaborations
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-clipboard-list"></i>
+                  </div>
+                  Syllabus
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  Progress Reports (EAB Navigate)
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/kanbas/settings/course-details.html">
+                <div class="d-flex">
+                  <div class="wd-icon-container">
+                    <i class="fas fa-cog"></i>
+                  </div>
+                  Settings
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Student Name</th>
-            <th>A1 SETUP Out of 100</th>
-            <th>A2 HTML Out of 100</th>
-            <th>A3 CSS Out of 100</th>
-            <th>A4 BOOTSTRAP Out of 100</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Pikachu</td>
-            <td>100</td>
-            <td>100</td>
-            <td>100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>Ditto</td>
-            <td>99</td>
-            <td>100</td>
-            <td>89</td>
-            <td><input type="text" value="85" /></td>
-          </tr>
-          <tr>
-            <td>JigglyPuff</td>
-            <td>68</td>
-            <td><input type="text" value="77" /></td>
-            <td>100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>Psyduck</td>
-            <td>55</td>
-            <td>30</td>
-            <td>97</td>
-            <td><input type="text" value="60" /></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
-</table>
+        <div class="wd-main-page-header d-none d-md-block">
+          <div class="d-flex justify-content-between align-items-center">
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/kanbas/home.html" class="wd-fg-color-red">
+                    <i class="fas fa-bars wd-main-page-header-bar-icon"></i>
+                    CS5610.17367.202410</a
+                  >
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Grades
+                </li>
+              </ol>
+            </nav>
+          </div>
+          <hr />
+        </div>
+
+        <div class="wd-main-page-content">
+          <!-- Course Navigation bar -->
+          <ul class="wd-sidebar-navigation d-none d-md-block">
+            <li><a href="/kanbas/home.html">Home</a></li>
+            <li><a href="#">Modules</a></li>
+            <li><a href="#">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li>
+              <a href="/kanbas/assignments/index.html">Assignments</a>
+            </li>
+            <li><a href="#">Quizzes</a></li>
+            <li class="wd-active"><a href="/kanbas/grades.html">Grades</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="/kanbas/settings/course-details.html">Settings</a></li>
+          </ul>
+
+          <div class="container wd-content-container">
+            <div class="row">
+              <div class="wd-course-content col-12">
+                <div class="wd-vertical-display">
+                  <!-- the horizontal list of buttons floating at the end -->
+                  <div>
+                    <div class="float-end">
+                      <button class="btn btn-light btn-sm border">
+                        <i
+                          class="fas fa-file-import me-1 wd-fg-color-dark-grey"
+                        ></i>
+                        Import
+                      </button>
+                      <button
+                        class="btn btn-light btn-sm dropdown-toggle border"
+                      >
+                        <i
+                          class="fas fa-file-export fa-flip-horizontal me-1 wd-fg-color-dark-grey"
+                        ></i>
+                        Export
+                      </button>
+                      <button class="btn btn-light btn-sm border">
+                        <i class="fas fa-cog wd-fg-color-dark-grey"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="col">
+                <label for="student-names" class="form-label"
+                  ><b>Student Names</b></label
+                >
+                <div class="input-group">
+                  <label for="student-names" class="input-group-text"
+                    ><i class="fas fa-search"></i
+                  ></label>
+                  <select id="student-names" class="form-select">
+                    <option selected disabled>
+                      <i class="fas fa-search"></i>
+                      Search Students
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <label for="assignment-names" class="form-label"
+                  ><b>Assignment Names</b></label
+                >
+                <div class="input-group">
+                  <label for="assignment-names" class="input-group-text"
+                    ><i class="fas fa-search"></i
+                  ></label>
+                  <select id="assignment-names" class="form-select">
+                    <option selected disabled>
+                      <i class="fas fa-search"></i>
+                      Search Assignments
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <button class="btn btn-light border">
+                  <i class="fas fa-filter wd-fg-color-dark-grey me-1"></i>
+                  Apply Filters
+                </button>
+              </div>
+            </div>
+
+            <!-- table of grades -->
+            <div class="mt-3 table-responsive">
+              <table class="table table-striped table-bordered wd-grades-table">
+                <thead class="table-light">
+                  <tr>
+                    <th>Student Name</th>
+                    <th>
+                      <div>A1 SETUP</div>
+                      <div class="wd-course-module-link-description">
+                        Out of 100
+                      </div>
+                    </th>
+                    <th>
+                      <div>A2 HTML</div>
+                      <div class="wd-course-module-link-description">
+                        Out of 100
+                      </div>
+                    </th>
+                    <th>
+                      <div>A3 CSS</div>
+                      <div class="wd-course-module-link-description">
+                        Out of 100
+                      </div>
+                    </th>
+                    <th>
+                      <div>A4 BOOTSTRAP</div>
+                      <div class="wd-course-module-link-description">
+                        Out of 100
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Pikachu</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td>Ditto</td>
+                    <td>99%</td>
+                    <td>100%</td>
+                    <td>89%</td>
+                    <td
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <input
+                        type="text"
+                        value="85%"
+                        class="form-control form-control-sm w-25 text-center"
+                      />
+                      <i
+                        class="fas fa-file-export ms-2 wd-fg-color-dark-grey"
+                      ></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>JigglyPuff</td>
+                    <td>68%</td>
+                    <td
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <input
+                        type="text"
+                        value="77%"
+                        class="form-control form-control-sm w-25 text-center"
+                      />
+                      <i
+                        class="fas fa-file-export ms-2 wd-fg-color-dark-grey"
+                      ></i>
+                    </td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td>Psyduck</td>
+                    <td>55%</td>
+                    <td>30%</td>
+                    <td>97%</td>
+                    <td
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <input
+                        type="text"
+                        value="60%"
+                        class="form-control form-control-sm w-25 text-center"
+                      />
+                      <i
+                        class="fas fa-file-export ms-2 wd-fg-color-dark-grey"
+                      ></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Uhshkld</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td>Lhsk</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td>Dhsklla</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td>Bnxlas</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td>Mhnslaw</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td>Fjska</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td>Ushksjla</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td>Xhslaa</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
