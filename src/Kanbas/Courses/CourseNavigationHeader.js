@@ -1,5 +1,4 @@
 import React from "react";
-import db from "../../Kanbas/Database";
 import {
   FaBars,
   FaGlasses,
@@ -34,13 +33,13 @@ import "../index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-export default function CourseNavigationHeader() {
+export default function CourseNavigationHeader({ courses }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const decodedPathname = decodeURIComponent(pathname);
   const segments = decodedPathname.split("/");
 
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   const courseSection = links.find((link) => decodedPathname.includes(link));
   const assignmentId =
     courseSection === "Assignments" && segments.length >= 6

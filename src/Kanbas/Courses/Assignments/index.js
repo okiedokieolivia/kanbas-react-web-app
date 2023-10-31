@@ -1,5 +1,12 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "./assignmentReducer";
 import {
   FaPlus,
   FaEllipsisV,
@@ -8,13 +15,38 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 import { BiSolidDownArrow } from "react-icons/bi";
-import db from "../../Database";
 import "../../index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const assignments = useSelector(
+    (state) => state.assignmentReducer.assignments
+  );
+  // const assignment = useSelector((state) => state.assignmentReducer.assignment);
+  const dispatch = useDispatch();
+
+  const newAssignment = {
+    title: "New Assignment",
+    course: courseId,
+    due: "2023-10-17",
+    points: 100,
+    description: "New Description",
+  };
+
+  const [assignmentToDelete, setAssignmentToDelete] = useState(undefined);
+
+  const navigate = useNavigate();
+  const addNewAssignment = () => {
+    dispatch(setAssignment(newAssignment));
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/Create New Assignment`);
+  };
+  const editAssignment = (assignment) => {
+    console.log("should navigate");
+    dispatch(setAssignment(assignment));
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
+  };
+
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
@@ -34,7 +66,12 @@ function Assignments() {
                   <FaPlus className="wd-fg-color-grey me-1" />
                   Group
                 </button>
-                <button className="btn btn-danger btn-sm border s-inline-flex align-items-center ms-1">
+                <button
+                  //to={`/Kanbas/Courses/${courseId}/Assignments/Create New Assignment`}
+                  onClick={addNewAssignment}
+                  type="button"
+                  className="btn btn-danger btn-sm border s-inline-flex align-items-center ms-1"
+                >
                   <FaPlus className="wd-fg-color-white me-1" />
                   Assignment
                 </button>
@@ -68,10 +105,13 @@ function Assignments() {
               </div>
 
               {courseAssignments.map((assignment) => (
-                <Link
+                <div
+                  onClick={() => {
+                    editAssignment(assignment);
+                  }}
                   type="button"
                   className="list-group-item list-group-item-action"
-                  to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                  //to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
                 >
                   <div className="d-flex align-items-center">
                     <div className="d-flex">
@@ -84,17 +124,79 @@ function Assignments() {
                         <span className="wd-fg-color-red">
                           Multiple Modules
                         </span>
-                        &nbsp;| <b>Due</b> {assignment.due} 2023 at 11:59pm |{" "}
+                        &nbsp;| <b>Due</b> {assignment.due} at 11:59pm |{" "}
                         {assignment.points} pts
                       </div>
                     </div>
                     <div className="d-flex">
-                      <FaCheckCircle className="wd-fg-color-green wd-course-module-list-icon" />
-                      <FaEllipsisV className="wd-fg-color-grey wd-course-module-list-icon ms-1" />
+                      {/* <FaCheckCircle className="wd-fg-color-green wd-course-module-list-icon" />
+                      <FaEllipsisV className="wd-fg-color-grey wd-course-module-list-icon ms-1" /> */}
+                      <button
+                        className="btn btn-sm btn-danger"
+                        data-bs-toggle="modal"
+                        data-bs-target="#deleteAssignmentModal"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setAssignmentToDelete(assignment);
+                        }}
+                      >
+                        Delete
+                      </button>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
+
+              {/* Modal */}
+              <div
+                class="modal fade"
+                id="deleteAssignmentModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Confirm Removal
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      Are you sure you want to remove
+                      {assignmentToDelete && <b> {assignmentToDelete.title}</b>}
+                      ?
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                        onClick={() => {
+                          if (assignmentToDelete) {
+                            dispatch(deleteAssignment(assignmentToDelete));
+                          }
+                        }}
+                      >
+                        OK
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,19 +1,52 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "../assignmentReducer";
 import { FaCircle, FaPlus, FaEllipsisV, FaCheckCircle } from "react-icons/fa";
-import db from "../../../Database";
 import { Link } from "react-router-dom";
 
 function AssignmentEditor() {
-  const { assignmentId } = useParams();
-  const assignment = db.assignments.find(
+  const { courseId, assignmentId } = useParams();
+  const assignments = useSelector(
+    (state) => state.assignmentReducer.assignments
+  );
+  const assignment = useSelector((state) => state.assignmentReducer.assignment);
+  const dispatch = useDispatch();
+
+  // const defaultAssignment = assignments.find(
+  //   (assignment) => assignment._id === assignmentId
+  // ) ?? {
+  //   title: "New Assignment",
+  //   course: courseId,
+  //   due: "2023-10-17",
+  //   points: 100,
+  //   description: "New Description",
+  // };
+
+  const newAssignment = !assignments.some(
     (assignment) => assignment._id === assignmentId
   );
+  // dispatch(setAssignment(defaultAssignment));
+  // const assignment = useSelector((state) => state.assignmentReducer.assignment);
+  // console.log("default assignment: ", defaultAssignment);
+  // console.log("assignment: ", assignment);
 
-  const { courseId } = useParams();
+  // const { courseId } = useParams();
   const navigate = useNavigate();
   const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
+    if (newAssignment) {
+      dispatch(addAssignment(assignment));
+    } else {
+      dispatch(updateAssignment(assignment));
+    }
+    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  };
+  const handleCancel = () => {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
 
@@ -24,13 +57,17 @@ function AssignmentEditor() {
           <div className="wd-vertical-display">
             {/* <!-- the horizontal list of buttons floating at the end --> */}
             <div>
-              <div className="float-end d-inline-flex align-items-center">
-                <FaCheckCircle className="wd-fg-color-green me-1" />
-                <span className="wd-fg-color-green">Published</span>
-                <button className="btn btn-light btn-sm border ms-1">
-                  <FaEllipsisV />
-                </button>
-              </div>
+              {newAssignment ? (
+                <h4>New Assignment</h4>
+              ) : (
+                <div className="float-end d-inline-flex align-items-center">
+                  <FaCheckCircle className="wd-fg-color-green me-1" />
+                  <span className="wd-fg-color-green">Published</span>
+                  <button className="btn btn-light btn-sm border ms-1">
+                    <FaEllipsisV />
+                  </button>
+                </div>
+              )}
             </div>
 
             <hr />
@@ -46,11 +83,25 @@ function AssignmentEditor() {
                   className="form-control"
                   id="assignment-name"
                   value={assignment.title}
+                  onChange={(e) =>
+                    dispatch(
+                      setAssignment({ ...assignment, title: e.target.value })
+                    )
+                  }
                 />
                 <textarea
                   className="form-control mt-3"
                   id="assignment-description"
                   rows="4"
+                  value={assignment.description}
+                  onChange={(e) =>
+                    dispatch(
+                      setAssignment({
+                        ...assignment,
+                        description: e.target.value,
+                      })
+                    )
+                  }
                 >
                   {assignment.description}
                 </textarea>
@@ -69,10 +120,18 @@ function AssignmentEditor() {
                   </div>
                   <div className="col-7">
                     <input
-                      type="text"
+                      type="number"
                       id="points"
                       className="form-control"
-                      value="100"
+                      value={assignment.points}
+                      onChange={(e) =>
+                        dispatch(
+                          setAssignment({
+                            ...assignment,
+                            points: e.target.value,
+                          })
+                        )
+                      }
                     />
                   </div>
                 </div>
@@ -320,7 +379,15 @@ function AssignmentEditor() {
                       type="date"
                       className="form-control"
                       id="due"
-                      value="2023-09-18"
+                      value={assignment.due}
+                      onChange={(e) =>
+                        dispatch(
+                          setAssignment({
+                            ...assignment,
+                            due: e.target.value,
+                          })
+                        )
+                      }
                     />
                     <div className="row justify-content-between mt-2">
                       <div className="col">
@@ -374,7 +441,7 @@ function AssignmentEditor() {
 
                 <div className="d-flex">
                   <button
-                    onClick={handleSave}
+                    onClick={handleCancel}
                     className="btn btn-light border btn-sm"
                   >
                     Cancel
