@@ -9,6 +9,7 @@ import {
 } from "../assignmentReducer";
 import { FaCircle, FaPlus, FaEllipsisV, FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import * as client from "../client";
 
 function AssignmentEditor() {
   const { courseId, assignmentId } = useParams();
@@ -38,14 +39,30 @@ function AssignmentEditor() {
 
   // const { courseId } = useParams();
   const navigate = useNavigate();
+
+  // const handleSave = () => {
+  //   if (newAssignment) {
+  //     dispatch(addAssignment(assignment));
+  //   } else {
+  //     dispatch(updateAssignment(assignment));
+  //   }
+  //   navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  // };
+
   const handleSave = () => {
     if (newAssignment) {
-      dispatch(addAssignment(assignment));
+      client.createAssignment(courseId, assignment).then((assignment) => {
+        dispatch(addAssignment(assignment));
+      });
     } else {
-      dispatch(updateAssignment(assignment));
+      client.updateAssignment(assignment).then((assignment) => {
+        dispatch(updateAssignment(assignment));
+      });
     }
+
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+
   const handleCancel = () => {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };

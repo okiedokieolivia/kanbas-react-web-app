@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -6,6 +6,7 @@ import {
   deleteAssignment,
   updateAssignment,
   setAssignment,
+  setAssignments,
 } from "./assignmentReducer";
 import {
   FaPlus,
@@ -17,6 +18,7 @@ import {
 import { BiSolidDownArrow } from "react-icons/bi";
 import "../../index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -37,19 +39,35 @@ function Assignments() {
   const [assignmentToDelete, setAssignmentToDelete] = useState(undefined);
 
   const navigate = useNavigate();
+
   const addNewAssignment = () => {
     dispatch(setAssignment(newAssignment));
     navigate(`/Kanbas/Courses/${courseId}/Assignments/Create New Assignment`);
   };
+
   const editAssignment = (assignment) => {
-    console.log("should navigate");
     dispatch(setAssignment(assignment));
     navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
+  };
+
+  const handleAssignmentDelete = () => {
+    if (assignmentToDelete) {
+      client.deleteAssignment(assignmentToDelete).then(() => {
+        dispatch(deleteAssignment(assignmentToDelete));
+      });
+    }
   };
 
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
+
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId).then((assignments) => {
+      dispatch(setAssignments(assignments));
+    });
+  }, [courseId, dispatch]);
+
   return (
     <div className="container wd-content-container">
       <div className="row">
@@ -185,11 +203,12 @@ function Assignments() {
                         type="button"
                         class="btn btn-primary"
                         data-bs-dismiss="modal"
-                        onClick={() => {
-                          if (assignmentToDelete) {
-                            dispatch(deleteAssignment(assignmentToDelete));
-                          }
-                        }}
+                        // onClick={() => {
+                        //   if (assignmentToDelete) {
+                        //     dispatch(deleteAssignment(assignmentToDelete));
+                        //   }
+                        // }}
+                        onClick={handleAssignmentDelete}
                       >
                         OK
                       </button>

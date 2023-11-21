@@ -32,14 +32,26 @@ import { links } from "./consts";
 import "../index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-export default function CourseNavigationHeader({ courses }) {
+export default function CourseNavigationHeader() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const decodedPathname = decodeURIComponent(pathname);
   const segments = decodedPathname.split("/");
 
-  const course = courses.find((course) => course._id === courseId);
+  //const course = courses.find((course) => course._id === courseId);
+  const URL = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   const courseSection = links.find((link) => decodedPathname.includes(link));
   const assignmentId =
     courseSection === "Assignments" && segments.length >= 6

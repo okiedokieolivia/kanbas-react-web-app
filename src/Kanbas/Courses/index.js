@@ -6,16 +6,28 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "../index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const URL = "http://localhost:4000/api/courses";
+
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+  };
+  //const course = courses.find((course) => course._id === courseId);
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
 
   return (
     <div className="wd-main-page-container">
-      <CourseNavigationHeader courses={courses} />
+      <CourseNavigationHeader />
 
       <div className="wd-main-page-content">
         <CourseNavigation />
@@ -35,17 +47,13 @@ function Courses({ courses }) {
   );
 }
 
-// function Courses() {
+// function Courses({ courses }) {
 //   const { courseId } = useParams();
-//   const course = db.courses.find((course) => course._id === courseId);
+//   const course = courses.find((course) => course._id === courseId);
 
 //   return (
 //     <div className="wd-main-page-container">
-//       <CourseNavigationHeader />
-//       {/* <div className="wd-main-page-header d-none d-md-block">
-//         <CourseNavigationHeader />
-//         <hr />
-//       </div> */}
+//       <CourseNavigationHeader courses={courses} />
 
 //       <div className="wd-main-page-content">
 //         <CourseNavigation />
@@ -64,4 +72,5 @@ function Courses({ courses }) {
 //     </div>
 //   );
 // }
+
 export default Courses;
