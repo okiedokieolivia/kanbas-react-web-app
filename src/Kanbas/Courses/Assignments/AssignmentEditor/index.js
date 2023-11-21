@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addAssignment,
-  deleteAssignment,
   updateAssignment,
   setAssignment,
 } from "../assignmentReducer";
@@ -55,11 +54,9 @@ function AssignmentEditor() {
         dispatch(addAssignment(assignment));
       });
     } else {
-      dispatch(updateAssignment(assignment));
-      client.updateAssignment(assignment);
-      // .then((assignment) => {
-      //   dispatch(updateAssignment(assignment));
-      // });
+      client.updateAssignment(assignment).then((assignment) => {
+        dispatch(updateAssignment(assignment));
+      });
     }
 
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
