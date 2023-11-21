@@ -42,7 +42,10 @@ export default function CourseNavigationHeader() {
   const segments = decodedPathname.split("/");
 
   //const course = courses.find((course) => course._id === courseId);
-  const URL = "http://localhost:4000/api/courses";
+  // const URL = "http://localhost:4000/api/courses";
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const URL = `${API_BASE}/api/courses`;
+
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
     const response = await axios.get(`${URL}/${courseId}`);
