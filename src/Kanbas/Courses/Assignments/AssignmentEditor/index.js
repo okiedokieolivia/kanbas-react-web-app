@@ -55,9 +55,11 @@ function AssignmentEditor() {
         dispatch(addAssignment(assignment));
       });
     } else {
-      client.updateAssignment(assignment).then((assignment) => {
-        dispatch(updateAssignment(assignment));
-      });
+      dispatch(updateAssignment(assignment));
+      client.updateAssignment(assignment);
+      // .then((assignment) => {
+      //   dispatch(updateAssignment(assignment));
+      // });
     }
 
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
